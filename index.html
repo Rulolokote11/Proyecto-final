@@ -5,74 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tradicional Sabor Don Dimas</title>
     <style>
-        body{
-            background: linear-gradient(135deg, #000000, #333333);
-        }
-        .div1{
-            background-color: rgb(209, 103, 4);
-            text-align: center;
-            margin: 10px 40px;
-            padding: 10px 20px 10px 20px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            border: none;
-            border-radius: 20px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-        }
-        .div2{
-            background-color: rgb(235, 74, 0);
-            text-align: center;
-            margin: 10px 40px;
-            padding: 10px 20px 10px 20px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            border: none;
-            border-radius: 20px;
-            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
-        }
-        .boton{
-            margin: 15px auto;
-            display: block;
-            width: 200px;
-            background-color: #f2c94c;
-            padding: 15px 0px;
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 18px;
-            color: #333;
-            border-radius: 30px;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        /* Estilos generales */
+        body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #FFF3E0;
         }
 
-        .boton:hover {
-            background-color: #e6cf04;
-            transition: all 5ms;
-            transform: translateY(-3px);
+        /* Barra de navegación */
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FF6F00;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .imgprin{
-            display: block;
-            margin: 0 auto;
-            height: 100px;
-            max-width: 100px;
-            border: none;
-            border-radius: 20px;
+        .navbar .logo {
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        }
+        .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+        }
+
+        .navbar .nav-links a {
+        color: #FFF8E1;
+        text-decoration: none;
+        font-size: 16px;
+        }
+
+        .navbar .nav-links a:hover {
+        color: #FFD54F;
+        transition: all 5ms;
+        transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
-    <div class="div1">
-        <h1>Tradicional Sabor Don Dimas</h1>
-    </div>
-    <br>
-    <img src="Imagenes/received_474473474128264.jpeg" alt="Prueba" class="imgprin">
-    <br>
-    <div class="div2">
-        <button class="boton">Historia</button>
-        <button class="boton">Menu</button>
-        <button class="boton">Negocios</button>
-        <button class="boton">Nuestra ubicacion</button>
-    </div>
+    <header class="navbar">
+    <a href="#" class="logo">Tradicional Sabor Don Dimas</a>
+        <nav class="nav-links">
+            <a href="#informacion">Nuestra historia</a>
+            <a href="#menu">Menú</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
 </body>
 </html>
