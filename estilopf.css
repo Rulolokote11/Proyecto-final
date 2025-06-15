@@ -1,0 +1,60 @@
+        /* Estilos generales */
+        body {
+        margin: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: #FFF3E0;
+        }
+
+        /* Barra de navegación */
+        .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #FF6F00;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        span{
+        font-size: 20px;
+        margin-left: 4px;
+        cursor: pointer;
+        color: #FFFFFF;
+        }
+
+        span:hover{
+        transition: all 5ms;
+        transform: translateY(-3px);
+        }
+
+        .navbar .logo {
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        }
+        .navbar .nav-links {
+        display: flex;
+        gap: 20px;
+        }
+
+        .navbar .nav-links a {
+        color: #FFF8E1;
+        text-decoration: none;
+        font-size: 16px;
+        }
+
+        .navbar .nav-links a:hover {
+        color: #FFD54F;
+        transition: all 5ms;
+        transform: translateY(-3px);
+        }
+        footer {
+        background-color: #696969;
+        padding: 10px;
+        text-align: center;
+        color: #333;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        }
