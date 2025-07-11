@@ -4,34 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilopf.css">
-    <link rel="stylesheet" href="Logos/Fontawesome/css/all.css">
+    <link rel="stylesheet" href="Logos/Fontawesome/css/all.min.css">
     <title>Menu</title>
     <style>
-        .contendor{
-            width: 100%;
-			height: 1500px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-			background-color: #FF6F00;
-            justify-content: center;
-            display: flex;
-            text-align: center;
+        .menu {
+        background-color: #FF6F00;
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 0 20px;
+        border-radius: 10px;
         }
-        .c1{
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
+
+        .menu-section {
+        margin-bottom: 20px;
         }
-        h1{
-            color: #fff;
+
+        .menu-section h2 {
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        color: #fff;
         }
-        h2{
-            text-align: left;
-            color: rgb(238, 222, 0);
+
+        .menu-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
         }
-        h3{
-            text-align: left;
-            color: #fff;
+
+        .menu-item-name {
+        font-weight: bold;
+        color: #000000;
+        }
+
+        .menu-item-price {
+        color: #ffffff;
+        font-weight: bold;
+        }
+
+        .menu-item-description {
+        font-size: 0.9em;
+        color: #000000;
+        margin-top: 2px;
+        margin-left: 10px;
         }
     </style>
 </head>
@@ -42,34 +57,219 @@
             <a href="NuestraHistoria.html">Nuestra historia</a>
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
-            <span class="fas fa-info-circle"></span>
+            <span class="fab fa-facebook"></span>
         </nav>
     </header>
-    <div class="contendor c1">
-        <h1>Menu</h1>
-        <h2>Tostadas</h2>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h2>Duritos</h2>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h2>Productos con elote</h2>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h2>Bebidas</h2>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h2>Raspados</h2>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
-        <h3>ABCD</h3>
+    <div class="menu">
+        <div class="menu-section">
+            <h2>Tostadas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tostadas sencillas(delgadas)</div>
+                    <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$3.00 c/u</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
+                <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$4.00 c/u</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                <div class="menu-item-name">Tostadas sencillas(grandes)</div>
+                <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$5.00 c/u</div>
+            </div>
+                        <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tostadas preparadas(delgadas)</div>
+                    <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$8.00 c/u</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
+                <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$12.00 c/u</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                <div class="menu-item-name">Tostadas sencillas(grandes)</div>
+                <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$15.00 c/u</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Duritos</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Durito sencillo</div>
+                    <div class="menu-item-description">Durito con salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Durito preparado</div>
+                    <div class="menu-item-description">Durito con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$25.00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Frituras</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Lagrimitas</div>
+                    <div class="menu-item-description">Salsa verde,polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Conchitas sencillas</div>
+                    <div class="menu-item-description">Salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$25.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Conchitas con elote.</div>
+                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$35.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tostitos sencillos.</div>
+                    <div class="menu-item-description">Salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$30.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tostitos con elote.</div>
+                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$45.00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Vaso de agua de melon</div>
+                    <div class="menu-item-description">Agua de melon completamente natural.</div>
+                </div>
+                <div class="menu-item-price">$25.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">1lt de agua de melon.</div>
+                    <div class="menu-item-description">Agua de melon completamente natural.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">1 lt de agua natural</div>
+                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+                </div>
+                <div class="menu-item-price">$20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Pepsi regular (500ml)</div>
+                    <div class="menu-item-description">Refresco de cola.</div>
+                </div>
+                <div class="menu-item-price">$20.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Pepsi black (500ml)</div>
+                    <div class="menu-item-description">Refresco de cola sin calorias.</div>
+                </div>
+                <div class="menu-item-price">$20.00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Raspados</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Diablito</div>
+                    <div class="menu-item-description">Chile, salsa, jugo de limon y chamoy.</div>
+                </div>
+                <div class="menu-item-price">$30.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Vainilla</div>
+                    <div class="menu-item-description">Raspado sabor vainilla.</div>
+                </div>
+                <div class="menu-item-price">$35.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Uva</div>
+                    <div class="menu-item-description">Raspado sabor a uva.</div>
+                </div>
+                <div class="menu-item-price">$35.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Piña</div>
+                    <div class="menu-item-description">Raspado natural sabor piña.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Mango</div>
+                    <div class="menu-item-description">Raspado natural sabor mango.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Coco</div>
+                    <div class="menu-item-description">Raspado antural sabor coco.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Nuez</div>
+                    <div class="menu-item-description">Raspado natural sabor nuez.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Tamarindo</div>
+                    <div class="menu-item-description">Raspado natural sabor tamarindo.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Fresas</div>
+                    <div class="menu-item-description">Raspado natural sabor fresa.</div>
+                </div>
+                <div class="menu-item-price">$40.00</div>
+            </div>
+        </div>
+        
     </div>
     <footer>
         <p>&copy; 2025 Tu Empresa. Todos los derechos reservados.</p>

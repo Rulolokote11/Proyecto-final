@@ -1,10 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú del Restaurante</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff9f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .menu {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .menu-section {
+      margin-bottom: 40px;
+    }
+
+    .menu-section h2 {
+      border-bottom: 2px solid #050505;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .menu-item-name {
+      font-weight: bold;
+    }
+
+    .menu-item-price {
+      color: #c0392b;
+      font-weight: bold;
+    }
+
+    .menu-item-description {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 2px;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
+
+  <header>
+    <h1>Menú del Día</h1>
+    <p>Restaurante El Buen Sabor</p>
+  </header>
+
+    <div class="menu">
+        <div class="menu-section">
+            <h2>Entradas</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Ensalada César</div>
+                    <div class="menu-item-description">Lechuga, crutones, queso parmesano y aderezo césar.</div>
+                </div>
+                <div class="menu-item-price">$6.50</div>
+            </div>
+            <div class="menu-item">
+                <div>
+                <div class="menu-item-name">Sopa de Tomate</div>
+                <div class="menu-item-description">Servida con pan tostado al ajo.</div>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Platos Principales</h2>
+            <div class="menu-item">
+                <div>
+                    <div class="menu-item-name">Pollo al Ajillo</div>
+                    <div class="menu-item-description">Acompañado de papas salteadas y vegetales.</div>
+                </div>
+            <div class="menu-item-price">$12.00</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Pasta Alfredo</div>
+                <div class="menu-item-description">Con crema, parmesano y champiñones.</div>
+            </div>
+            <div class="menu-item-price">$11.50</div>
+        </div>
+        </div>
+
+        <div class="menu-section">
+        <h2>Postres</h2>
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Tiramisú</div>
+                </div>
+            <div class="menu-item-price">$4.00</div>
+        </div>
+        <div class="menu-item">
+            <div>
+                <div class="menu-item-name">Flan de Vainilla</div>
+                </div>
+                <div class="menu-item-price">$3.50</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Bebidas</h2>
+            <div class="menu-item">
+                <div class="menu-item-name">Agua Mineral</div>
+                <div class="menu-item-price">$1.50</div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-name">Jugo Natural</div>
+                <div class="menu-item-price">$2.50</div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
