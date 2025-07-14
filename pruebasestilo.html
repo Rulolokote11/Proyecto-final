@@ -1,135 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Menú del Restaurante</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrusel con Deslizamiento</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
       margin: 0;
-      padding: 0;
-      background-color: #fff9f0;
-      color: #333;
-    }
-
-    header {
-      background-color: #c0392b;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    .menu {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-
-    .menu-section {
-      margin-bottom: 40px;
-    }
-
-    .menu-section h2 {
-      border-bottom: 2px solid #050505;
-      padding-bottom: 5px;
-      margin-bottom: 15px;
-    }
-
-    .menu-item {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .menu-item-name {
-      font-weight: bold;
+    .carrusel {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      background-color: white;
     }
 
-    .menu-item-price {
-      color: #c0392b;
-      font-weight: bold;
+    .carrusel-inner {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
     }
 
-    .menu-item-description {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 2px;
-      margin-left: 10px;
+    .carrusel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
     }
+
+    .flecha {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 18px;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .flecha.izquierda {
+      left: 10px;
+    }
+
+    .flecha.derecha {
+      right: 10px;
+    }
+
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Menú del Día</h1>
-    <p>Restaurante El Buen Sabor</p>
-  </header>
+  <div class="carrusel">
+    <button class="flecha izquierda">&#8592;</button>
 
-    <div class="menu">
-        <div class="menu-section">
-            <h2>Entradas</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Ensalada César</div>
-                    <div class="menu-item-description">Lechuga, crutones, queso parmesano y aderezo césar.</div>
-                </div>
-                <div class="menu-item-price">$6.50</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                <div class="menu-item-name">Sopa de Tomate</div>
-                <div class="menu-item-description">Servida con pan tostado al ajo.</div>
-                </div>
-                <div class="menu-item-price">$5.00</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Platos Principales</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Pollo al Ajillo</div>
-                    <div class="menu-item-description">Acompañado de papas salteadas y vegetales.</div>
-                </div>
-            <div class="menu-item-price">$12.00</div>
-        </div>
-        <div class="menu-item">
-            <div>
-                <div class="menu-item-name">Pasta Alfredo</div>
-                <div class="menu-item-description">Con crema, parmesano y champiñones.</div>
-            </div>
-            <div class="menu-item-price">$11.50</div>
-        </div>
-        </div>
-
-        <div class="menu-section">
-        <h2>Postres</h2>
-        <div class="menu-item">
-            <div>
-                <div class="menu-item-name">Tiramisú</div>
-                </div>
-            <div class="menu-item-price">$4.00</div>
-        </div>
-        <div class="menu-item">
-            <div>
-                <div class="menu-item-name">Flan de Vainilla</div>
-                </div>
-                <div class="menu-item-price">$3.50</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Bebidas</h2>
-            <div class="menu-item">
-                <div class="menu-item-name">Agua Mineral</div>
-                <div class="menu-item-price">$1.50</div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-name">Jugo Natural</div>
-                <div class="menu-item-price">$2.50</div>
-            </div>
-        </div>
+    <div class="carrusel-inner">
+      <img src="Imagenes/Abuelo.jpg" />
+      <img src="Imagenes/Carreton.jpg" />
+      <img src="Imagenes/received_474473474128264.jpeg" />
+      <img src="Imagenes/Carreton.jpg" />
     </div>
+
+    <button class="flecha derecha">&#8594;</button>
+  </div>
+
+  <script>
+    const carruselInner = document.querySelector('.carrusel-inner');
+    const totalImagenes = document.querySelectorAll('.carrusel-inner img').length;
+    const btnIzq = document.querySelector('.flecha.izquierda');
+    const btnDer = document.querySelector('.flecha.derecha');
+    let indice = 0;
+
+    function actualizarCarrusel() {
+      const ancho = document.querySelector('.carrusel').clientWidth;
+      carruselInner.style.transform = `translateX(-${indice * ancho}px)`;
+    }
+
+    btnIzq.addEventListener('click', () => {
+      indice = (indice - 1 + totalImagenes) % totalImagenes;
+      actualizarCarrusel();
+    });
+
+    btnDer.addEventListener('click', () => {
+      indice = (indice + 1) % totalImagenes;
+      actualizarCarrusel();
+    });
+
+    // Redimensionar: mantener centrado al cambiar el tamaño de pantalla
+    window.addEventListener('resize', actualizarCarrusel);
+  </script>
+
 </body>
 </html>

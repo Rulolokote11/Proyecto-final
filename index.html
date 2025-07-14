@@ -9,7 +9,7 @@
     <style>
         .contenedor{
             width: 100%;
-			height: 1200px;
+			height: 550px;
             margin-top: 10px;
             margin-bottom: 10px;
 			background-color: #FF6F00;
@@ -32,15 +32,60 @@
         .Carreton:hover{
             cursor: pointer;
         }
-        h1{
-            color: #fff;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
         .Direccion{
             height: 450px;
             width: 800px;
             border-radius: 20px;
             box-shadow: 0 4px 6px rgb(0, 0, 0,.2);
+        }
+        .carrusel {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .carrusel-hijo {
+            display: flex;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carrusel-hijo img {
+            width: 800px;
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .flecha {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .flecha.izquierda {
+            left: 10px;
+        }
+
+        .flecha.derecha {
+            right: 10px;
+        }
+        .Tp{
+            text-align: center;
+            font-size: 40px;
+            color: #FF6F00;
         }
     </style>
 </head>
@@ -54,9 +99,36 @@
             <span class="fab fa-facebook"></span>
         </nav>
     </header>
+    <h1 class="Tp">Tradicional Sabor Don Dimas</h1>
     <div class="contenedor c1">
-        <img src="Imagenes/Carreton.jpg" alt="Carreton" class="Carreton">
-        <h1>Nuestra direccion</h1>
+        <div class="carrusel">
+            <button class="flecha izquierda">&#8592;</button>
+
+            <div class="carrusel-hijo">
+                <img src="Imagenes/Carreton.jpg" alt="Carreton" />
+                <img src="Imagenes/Caleb.jpg" alt="Jotocaleb" />
+                <img src="Imagenes/Rulillo.jpg" alt="Yo" />
+            </div>
+
+            <button class="flecha derecha">&#8594;</button>
+        </div>
+    </div>
+    <h1 class="Tp">Nuestros Productos</h1>
+    <div class="contenedor c1">
+            <div class="carrusel">
+            <button class="flecha izquierda">&#8592;</button>
+
+            <div class="carrusel-hijo">
+                <img src="Imagenes/T1.jpg" alt="Tostadas" />
+                <img src="Imagenes/Y1.jpg" alt="Yukis" />
+                <img src="Imagenes/S1.jpg" alt="SAAAA" />
+            </div>
+
+            <button class="flecha derecha">&#8594;</button>
+        </div>
+    </div>
+    <h1 class="Tp">Nuestra direccion</h1>
+    <div class="contenedor c1">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1261.9144816719042!2d-100.22038827886436!3d25.67104045459421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c1963aa0b673%3A0x9ea1b2e837b23fa0!2sTradicional%20sabor%20Don%20Dimas!5e1!3m2!1ses!2smx!4v1749957732311!5m2!1ses!2smx" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="Direccion"></iframe>
     </div>
     <footer>
@@ -64,4 +136,29 @@
         <p>Contacto: <a href="mailto:info@tuempresa.com">info@tuempresa.com</a></p>
     </footer>
 </body>
+<script>
+    document.querySelectorAll('.carrusel').forEach(carrusel => {
+        const carruselHijo = carrusel.querySelector('.carrusel-hijo');
+        const imagenes = carruselHijo.querySelectorAll('img');
+        const btnIzq = carrusel.querySelector('.flecha.izquierda');
+        const btnDer = carrusel.querySelector('.flecha.derecha');
+        let indice = 0;
+
+        function actualizarCarrusel() {
+            carruselHijo.style.transform = `translateX(-${indice * 800}px)`;
+        }
+
+        btnIzq.addEventListener('click', () => {
+            indice = (indice - 1 + imagenes.length) % imagenes.length;
+            actualizarCarrusel();
+        });
+
+        btnDer.addEventListener('click', () => {
+            indice = (indice + 1) % imagenes.length;
+            actualizarCarrusel();
+        });
+
+        window.addEventListener('resize', actualizarCarrusel);
+    });
+</script>
 </html>
