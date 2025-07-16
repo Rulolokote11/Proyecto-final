@@ -4,8 +4,9 @@
         }
         body {
         margin: 0;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         background-color: #FFF3E0;
+        margin: 0;
+        padding-top: 50px; /* ajusta esto al alto real de tu navbar */
         }
 
         /* Barra de navegación */
@@ -16,6 +17,12 @@
         background-color: #FF6F00;
         padding: 10px 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        border-bottom: solid 2px white;
         }
 
         span{
@@ -26,8 +33,9 @@
         }
 
         span:hover{
-        transition: all 5ms;
+        transition: all .3s;
         transform: translateY(-3px);
+        color: #FFD54F;
         }
 
         .navbar .logo {
@@ -35,6 +43,11 @@
         font-size: 24px;
         font-weight: bold;
         text-decoration: none;
+        }
+        .navbar .logo:hover{
+        transition: all .3s;
+        transform: translateY(-3px);
+        color: #FFD54F;
         }
         .navbar .nav-links {
         display: flex;
@@ -49,14 +62,14 @@
 
         .navbar .nav-links a:hover {
         color: #FFD54F;
-        transition: all 5ms;
+        transition: all .3s;
         transform: translateY(-3px);
         }
         footer {
-        background-color: #696969;
+        background-color: #FF6F00;
         padding: 10px;
         text-align: center;
-        color: #333;
+        color: #ffffff;
         position: relative;
         bottom: 0;
         width: 100%;
