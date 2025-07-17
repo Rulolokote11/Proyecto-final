@@ -5,25 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="stylesheet" href="estilopf.css">
-    <link rel="stylesheet" href="Logos/Fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
-        .contenedor{
-            width: 90%;
-			height: 550px;
-            margin: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
-			background-color: #FF6F00;
-            justify-content: center;
-            display: flex;
-            text-align: center;
-            border-radius: 10px;
-        }
+  .contenedor {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+    }
+
+    .contenedor-servicios {
+        color: rgb(0, 0, 0);
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .contenedor-servicios h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .contenedor-servicios h2:hover{
+        color: yellow;
+        scale: 1.1;
+        transition: all .5s;
+        cursor: pointer;
+    }
+    .contenedor-servicios span:hover{
+        color: yellow;
+        transform: translateY(-3);
+        cursor: pointer;
+    }
+
+    .contenedor-servicios p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .contenedor-servicios ul {
+        list-style: none;
+        padding-left: 0;
+        font-size: 18px;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .contenedor-servicios ul li {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .contenedor-servicios ul li span {
+        color: #000000;
+        margin-right: 8px;
+    }
+
+    .lista-ingredientes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 30px;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+
+    .lista-ingredientes li {
+        margin: 4px 0;
+        text-align: center;
+    }
+    .servicio{
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+    }
     </style>
 </head>
 <body>
     <header class="navbar">
-    <a href="index.html" class="logo">Tradicional Sabor Don Dimas</a>
+        <a href="index.html" class="logo">Tradicional Sabor Don Dimas</a>
         <nav class="nav-links">
             <a href="NuestraHistoria.html">Nuestra historia</a>
             <a href="Menu.html">Menú</a>
@@ -32,9 +97,45 @@
             <span class="fab fa-facebook"></span>
         </nav>
     </header>
-    <div class="contenedor"></div>
+
+    <div class="contenedor">
+        <div class="contenedor-servicios">
+            <h2><i class="fas fa-concierge-bell"></i> Servicios para Eventos</h2>
+            <hr>
+            <p>
+                En Tradicional Sabor Don Dimas ofrecemos paquetes especiales para tus eventos. 
+                Puedes elegir entre dos opciones:
+            </p>
+            <ul>
+                <li><span class="fas fa-box-open"></span> <strong>Venta de paquetes:</strong> Te entregamos todo lo necesario para tu evento, incluyendo:
+                    <ul class="lista-ingredientes">
+                        <li>Tostadas</li>
+                        <li>Duritos</li>
+                        <li>Frijoles</li>
+                        <li>Repollo</li>
+                        <li>Salsa</li>
+                        <li>Crema</li>
+                        <li>Polvo</li>
+                        <li>Limones</li>
+                        <li>Desechables</li>
+                        <li>Garrafónes de agua de melón</li>
+                    </ul>
+                    <hr>
+                    <img src="Imagenes/S1.jpg" alt="S1" class="servicio">
+                </li>
+                <hr>
+                <li style="margin-top: 15px;"><span class="fas fa-user"></span> <strong>Servicio con preparacion:</strong> Además de los ingredientes, llevamos a alguien que estara preparando las botanas en el transcurso de tu evento.</li>
+                <hr>
+                <img src="Imagenes/S1.jpg" alt="S1" class="servicio">
+            </ul>
+            <p style="margin-top: 20px;">
+                ¡Contáctanos para cotizar tu evento y llevar el auténtico sabor a tu celebración!
+            </p>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2025 TradicionalSabor Don Dimas. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Tradicional Sabor Don Dimas. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
