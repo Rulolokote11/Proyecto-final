@@ -9,10 +9,8 @@
     <style>
         .contenedor{
             width: 90%;
-			height: 550px;
-            margin: auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            margin: 20px auto;
+            padding: 10px 0;
 			background-color: transparent;
             justify-content: center;
             display: flex;
@@ -38,6 +36,7 @@
         .Direccion{
             width: 90%;
             max-width: 900px;
+            aspect-ratio: 16 / 9;
             height: 500px;
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -46,8 +45,10 @@
         }
         .carrusel {
             position: relative;
-            width: 800px;
-            height: 450px;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            aspect-ratio: 16/9;
             overflow: hidden;
             border-radius: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -61,7 +62,7 @@
         }
 
         .carrusel-hijo img {
-            width: 800px;
+            width: 100%;
             height: 100%;
             object-fit: cover;
             flex-shrink: 0;
@@ -93,6 +94,25 @@
             font-size: 40px;
             color: #FF6F00;
         }
+        @media (max-width: 800px) {
+            .Tp {
+                font-size: 28px;
+            }
+
+            .flecha {
+                font-size: 16px;
+                padding: 8px;
+            }
+
+            .contenedor {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+
+            .carrusel {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -103,7 +123,9 @@
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
             <a href="laborsocial.html">Labor social</a>
-            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/tradicionalsabordondimas" target="_blank">
+                <span class="fab fa-facebook"></span>
+            </a>
         </nav>
     </header>
     <h1 class="Tp">Tradicional Sabor Don Dimas</h1>

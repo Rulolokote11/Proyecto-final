@@ -46,6 +46,35 @@
             text-align: justify;
             color: #000000;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 800px) {
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            gap: 20px;
+        }
+
+        .TituloH {
+            font-size: 32px;
+            text-align: center;
+        }
+
+        .contenido h1 {
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        .ImagenSide {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+    }
     </style>
 </head>
 <body>
@@ -56,7 +85,9 @@
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
             <a href="laborsocial.html">Labor social</a>
-            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/tradicionalsabordondimas" target="_blank">
+                <span class="fab fa-facebook"></span>
+            </a>
         </nav>
     </header>
     <div class="contenedor">

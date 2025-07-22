@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="Logos/Fontawesome/css/all.min.css">
     <style>
         .contenedor{
+            background-color: transparent;
+            padding: 10px;
             width: 90%;
-			height: 600px;
-            margin: auto;
-            margin-top: 20px;
-            margin-bottom: 10px;
-			background-color: transparent;
-            justify-content: center;
-            display: flex;
-            text-align: center;
+            gap: 20px;
+            max-width: 100%;
+            margin: 30px auto;
+            display: grid;
             border-radius: 10px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,auto);
+
+            grid-template-areas:"texto  texto   reciclar"
+                                "texto  texto   reciclar"
         }
         .c1{
             flex-flow: column;
@@ -25,11 +28,13 @@
             align-items: center;
         }
         .reciclar{
-            margin-top: 100px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            margin-top: 80px;
             border: 2px solid gray;
             border-radius: 20px;
             width: 400px;
             height: 400px;
+            grid-area: reciclar;
         }
         .titulo{
             text-align: center;
@@ -42,6 +47,48 @@
             color: green;
             transform: translateY(3);
         }
+        .texto{
+            text-align: center;
+            text-align: justify;
+            font-size: 15px;
+            grid-area: texto;
+        }
+        @media (max-width: 900px) {
+            .contenedor {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto;
+                grid-template-areas:
+                    "texto"
+                    "reciclar";
+                padding-left: 20px;
+                height: auto;
+                gap: 20px;
+                width: 95%;
+                margin: auto;
+            }
+
+            .reciclar {
+                width: 100%;
+                height: auto;
+                margin-top: 0;
+                border-radius: 15px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            .texto {
+                font-size: 16px;
+                text-align: justify;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .texto h2 {
+                font-size: 14px;
+            }
+            .titulo h1 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -52,20 +99,25 @@
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
             <a href="laborsocial.html">Labor social</a>
-            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/tradicionalsabordondimas" target="_blank">
+                <span class="fab fa-facebook"></span>
+            </a>
         </nav>
     </header>
     <div class="titulo">
         <h1>Propuesta de labor social <span class="fas fa-recycle"></span></h1>
     </div>
     <div class="contenedor">
-        <h2>En Tradicional Sabor Don Dimas creemos firmemente que cuidar el medio ambiente no es solo una responsabilidad, sino una necesidad urgente para garantizar un futuro mejor para todos. Por eso, nuestra propuesta de labor social está centrada en fomentar hábitos de consumo responsable y en reducir el uso de materiales desechables que tanto dañan a nuestro planeta.
-        <br>
-        Una de las acciones que promovemos es el uso de recipientes reutilizables. Invitamos a todas las personas a traer su propio vaso para que puedan disfrutar de sus bebidas sin necesidad de utilizar vasos desechables. De esta manera, no solo reducimos el desperdicio, sino que también incentivamos la conciencia ambiental desde los pequeños actos del día a día.
-        <br>
-        Además, si decides consumir tu pedido en el lugar, te proporcionaremos platos de plástico reutilizables en lugar de platos desechables. Esta simple acción contribuye significativamente a disminuir la cantidad de residuos generados y refuerza nuestro compromiso con un modelo de consumo más sostenible.
-        <br>
-        Estamos convencidos de que cada pequeña acción suma, y que al adoptar prácticas más responsables con el entorno podemos marcar una gran diferencia. Nuestro objetivo es generar un cambio positivo, educando con el ejemplo y creando una comunidad más consciente y respetuosa con la naturaleza.</h2>
+        <div class="texto">
+            <h2>En Tradicional Sabor Don Dimas creemos firmemente que cuidar el medio ambiente no es solo una responsabilidad, sino una necesidad urgente para garantizar un futuro mejor para todos. Por eso, nuestra propuesta de labor social está centrada en fomentar hábitos de consumo responsable y en reducir el uso de materiales desechables que tanto dañan a nuestro planeta.
+            <br>
+            Una de las acciones que promovemos es el uso de recipientes reutilizables. Invitamos a todas las personas a traer su propio vaso para que puedan disfrutar de sus bebidas sin necesidad de utilizar vasos desechables. De esta manera, no solo reducimos el desperdicio, sino que también incentivamos la conciencia ambiental desde los pequeños actos del día a día.
+            <br>
+            Además, si decides consumir tu pedido en el lugar, te proporcionaremos platos de plástico reutilizables en lugar de platos desechables. Esta simple acción contribuye significativamente a disminuir la cantidad de residuos generados y refuerza nuestro compromiso con un modelo de consumo más sostenible.
+            <br>
+            Estamos convencidos de que cada pequeña acción suma, y que al adoptar prácticas más responsables con el entorno podemos marcar una gran diferencia. Nuestro objetivo es generar un cambio positivo, educando con el ejemplo y creando una comunidad más consciente y respetuosa con la naturaleza.</h2>
+        </div>
+
         <img src="Imagenes/Reciclaje.jfif" alt="Reciclaje" class="reciclar">
     </div>
     <footer>

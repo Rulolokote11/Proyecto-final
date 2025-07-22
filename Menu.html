@@ -48,6 +48,65 @@
         margin-top: 2px;
         margin-left: 10px;
         }
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            flex: 1;
+            max-width: 150px;
+        }
+
+        .side-images img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
+        .menu {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        @media (max-width: 800px) {
+
+        .menu-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .side-images {
+            display: none;
+        }
+
+        .menu {
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .menu-item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .menu-item-price {
+            margin-top: 5px;
+        }
+
+        footer {
+            font-size: 14px;
+            padding: 15px 10px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -58,220 +117,245 @@
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
             <a href="laborsocial.html">Labor social</a>
-            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/tradicionalsabordondimas" target="_blank">
+                <span class="fab fa-facebook"></span>
+            </a>
         </nav>
     </header>
-    <div class="menu">
-        <div class="menu-section">
-            <h2>Tostadas</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Tostadas sencillas(delgadas)</div>
-                    <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$3.00 c/u</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
-                <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$4.00 c/u</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                <div class="menu-item-name">Tostadas sencillas(grandes)</div>
-                <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$5.00 c/u</div>
-            </div>
-                        <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Tostadas preparadas(delgadas)</div>
-                    <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$8.00 c/u</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
-                <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$12.00 c/u</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                <div class="menu-item-name">Tostadas sencillas(grandes)</div>
-                <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$15.00 c/u</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Duritos</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Durito sencillo</div>
-                    <div class="menu-item-description">Durito con salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$5.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Durito preparado</div>
-                    <div class="menu-item-description">Durito con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$25.00</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Frituras</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Lagrimitas</div>
-                    <div class="menu-item-description">Salsa verde,polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$20.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Conchitas sencillas</div>
-                    <div class="menu-item-description">Salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$25.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Conchitas con elote.</div>
-                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$35.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Tostitos sencillos.</div>
-                    <div class="menu-item-description">Salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$30.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Tostitos con elote.</div>
-                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$45.00</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Bebidas</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Vaso de agua de melon</div>
-                    <div class="menu-item-description">Agua de melon completamente natural.</div>
-                </div>
-                <div class="menu-item-price">$25.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">1lt de agua de melon.</div>
-                    <div class="menu-item-description">Agua de melon completamente natural.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">1 lt de agua natural</div>
-                    <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
-                </div>
-                <div class="menu-item-price">$20.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Pepsi regular (500ml)</div>
-                    <div class="menu-item-description">Refresco de cola.</div>
-                </div>
-                <div class="menu-item-price">$20.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Pepsi black (500ml)</div>
-                    <div class="menu-item-description">Refresco de cola sin calorias.</div>
-                </div>
-                <div class="menu-item-price">$20.00</div>
-            </div>
-        </div>
-
-        <div class="menu-section">
-            <h2>Raspados</h2>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Diablito</div>
-                    <div class="menu-item-description">Chile, salsa, jugo de limon y chamoy.</div>
-                </div>
-                <div class="menu-item-price">$30.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Vainilla</div>
-                    <div class="menu-item-description">Raspado sabor vainilla.</div>
-                </div>
-                <div class="menu-item-price">$35.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Uva</div>
-                    <div class="menu-item-description">Raspado sabor a uva.</div>
-                </div>
-                <div class="menu-item-price">$35.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Piña</div>
-                    <div class="menu-item-description">Raspado natural sabor piña.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Mango</div>
-                    <div class="menu-item-description">Raspado natural sabor mango.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Coco</div>
-                    <div class="menu-item-description">Raspado antural sabor coco.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Nuez</div>
-                    <div class="menu-item-description">Raspado natural sabor nuez.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Tamarindo</div>
-                    <div class="menu-item-description">Raspado natural sabor tamarindo.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-            <div class="menu-item">
-                <div>
-                    <div class="menu-item-name">Fresas</div>
-                    <div class="menu-item-description">Raspado natural sabor fresa.</div>
-                </div>
-                <div class="menu-item-price">$40.00</div>
-            </div>
-        </div>
-        
+<div class="menu-container">
+    <div class="side-images left">
+        <img src="Imagenes/D1.jpg" alt="D1">
+        <img src="Imagenes/T1.jpg" alt="T1">
+        <img src="Imagenes/Y3.jpg" alt="Y3">
+        <img src="Imagenes/T7.jpg" alt="T7">
+        <img src="Imagenes/Y1.jpg" alt="Y1">
+        <img src="Imagenes/T8.jpg" alt="T8">
+        <img src="Imagenes/T9.jpg" alt="T9">
+        <img src="Imagenes/Y4.jpg" alt="Y4">
     </div>
+
+  <div class="menu">
+    <div class="menu-section">
+          <h2>Tostadas</h2>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Tostadas sencillas(delgadas)</div>
+                  <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$3.00 c/u</div>
+          </div>
+          <div class="menu-item">
+              <div>
+              <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
+              <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$4.00 c/u</div>
+          </div>
+          <div class="menu-item">
+              <div>
+              <div class="menu-item-name">Tostadas sencillas(grandes)</div>
+              <div class="menu-item-description">Tostadas con salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$5.00 c/u</div>
+          </div>
+                      <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Tostadas preparadas(delgadas)</div>
+                  <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$8.00 c/u</div>
+          </div>
+          <div class="menu-item">
+              <div>
+              <div class="menu-item-name">Tostadas sencillas(gruesas)</div>
+              <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$12.00 c/u</div>
+          </div>
+          <div class="menu-item">
+              <div>
+              <div class="menu-item-name">Tostadas sencillas(grandes)</div>
+              <div class="menu-item-description">Tostadas con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$15.00 c/u</div>
+          </div>
+      </div>
+
+      <div class="menu-section">
+          <h2>Duritos</h2>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Durito sencillo</div>
+                  <div class="menu-item-description">Durito con salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$5.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Durito preparado</div>
+                  <div class="menu-item-description">Durito con frijoles, repollo, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$25.00</div>
+          </div>
+      </div>
+
+      <div class="menu-section">
+          <h2>Frituras</h2>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Lagrimitas</div>
+                  <div class="menu-item-description">Salsa verde,polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$20.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Conchitas sencillas</div>
+                  <div class="menu-item-description">Salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$25.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Conchitas con elote.</div>
+                  <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$35.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Tostitos sencillos.</div>
+                  <div class="menu-item-description">Salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$30.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Tostitos con elote.</div>
+                  <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$45.00</div>
+          </div>
+      </div>
+
+      <div class="menu-section">
+          <h2>Bebidas</h2>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Vaso de agua de melon</div>
+                  <div class="menu-item-description">Agua de melon completamente natural.</div>
+              </div>
+              <div class="menu-item-price">$25.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">1lt de agua de melon.</div>
+                  <div class="menu-item-description">Agua de melon completamente natural.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">1 lt de agua natural</div>
+                  <div class="menu-item-description">Elote en grano, queso, crema, salsa verde, polvo y limon.</div>
+              </div>
+              <div class="menu-item-price">$20.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Pepsi regular (500ml)</div>
+                  <div class="menu-item-description">Refresco de cola.</div>
+              </div>
+              <div class="menu-item-price">$20.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Pepsi black (500ml)</div>
+                  <div class="menu-item-description">Refresco de cola sin calorias.</div>
+              </div>
+              <div class="menu-item-price">$20.00</div>
+          </div>
+      </div>
+
+      <div class="menu-section">
+          <h2>Raspados</h2>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Diablito</div>
+                  <div class="menu-item-description">Chile, salsa, jugo de limon y chamoy.</div>
+              </div>
+              <div class="menu-item-price">$30.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Vainilla</div>
+                  <div class="menu-item-description">Raspado sabor vainilla.</div>
+              </div>
+              <div class="menu-item-price">$35.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Uva</div>
+                  <div class="menu-item-description">Raspado sabor a uva.</div>
+              </div>
+              <div class="menu-item-price">$35.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Piña</div>
+                  <div class="menu-item-description">Raspado natural sabor piña.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Mango</div>
+                  <div class="menu-item-description">Raspado natural sabor mango.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Coco</div>
+                  <div class="menu-item-description">Raspado antural sabor coco.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Nuez</div>
+                  <div class="menu-item-description">Raspado natural sabor nuez.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Tamarindo</div>
+                  <div class="menu-item-description">Raspado natural sabor tamarindo.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+          <div class="menu-item">
+              <div>
+                  <div class="menu-item-name">Fresas</div>
+                  <div class="menu-item-description">Raspado natural sabor fresa.</div>
+              </div>
+              <div class="menu-item-price">$40.00</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="side-images right">
+      <img src="Imagenes/T3.jpg" alt="T3">
+      <img src="Imagenes/Y2.jpg" alt="Y2">
+      <img src="Imagenes/T2.jpg" alt="T2">
+      <img src="Imagenes/S3.jpg" alt="S3">
+      <img src="Imagenes/T5.jpg" alt="T5">
+      <img src="Imagenes/T6.jpg" alt="T6">
+      <img src="Imagenes/T10.jpg" alt="T10">
+  </div>
+</div>
+
     <footer>
         <p>&copy; 2025 TradicionalSabor Don Dimas. Todos los derechos reservados.</p>
     </footer>

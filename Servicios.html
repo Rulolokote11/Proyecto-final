@@ -8,82 +8,136 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
-  .contenedor {
-        width: 90%;
-        height: auto;
-        margin: auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        background-color: transparent;
-        justify-content: center;
-        display: flex;
-        text-align: center;
-    }
+    .contenedor {
+            width: 90%;
+            height: auto;
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: transparent;
+            justify-content: center;
+            display: flex;
+            text-align: center;
+        }
 
-    .contenedor-servicios {
-        color: rgb(0, 0, 0);
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-    }
+        .contenedor-servicios {
+            color: rgb(0, 0, 0);
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
 
-    .contenedor-servicios h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
+        .contenedor-servicios h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
 
-    .contenedor-servicios h2:hover{
-        color: yellow;
-        scale: 1.1;
-        transition: all .5s;
-        cursor: pointer;
-    }
-    .contenedor-servicios span:hover{
-        color: yellow;
-        transform: translateY(-3);
-        cursor: pointer;
-    }
+        .contenedor-servicios h2:hover{
+            color: yellow;
+            scale: 1.1;
+            transition: all .5s;
+            cursor: pointer;
+        }
+        .contenedor-servicios span:hover{
+            color: yellow;
+            transform: translateY(-3);
+            cursor: pointer;
+        }
 
-    .contenedor-servicios p {
-        font-size: 18px;
-        line-height: 1.5;
-    }
+        .contenedor-servicios p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
 
-    .contenedor-servicios ul {
-        list-style: none;
-        padding-left: 0;
-        font-size: 18px;
-        text-align: left;
-        margin-top: 15px;
-    }
+        .contenedor-servicios ul {
+            list-style: none;
+            padding-left: 0;
+            font-size: 18px;
+            text-align: left;
+            margin-top: 15px;
+        }
 
-    .contenedor-servicios ul li {
-        margin-bottom: 12px;
-        text-align: center;
-    }
+        .contenedor-servicios ul li {
+            margin-bottom: 12px;
+            text-align: center;
+        }
 
-    .contenedor-servicios ul li span {
-        color: #000000;
-        margin-right: 8px;
-    }
+        .contenedor-servicios ul li span {
+            color: #000000;
+            margin-right: 8px;
+        }
 
-    .lista-ingredientes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px 30px;
-        margin-top: 10px;
-        padding-left: 15px;
-    }
+        .lista-ingredientes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 30px;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
 
-    .lista-ingredientes li {
-        margin: 4px 0;
-        text-align: center;
-    }
-    .servicio{
-        width: 800px;
-        height: 500px;
-        border-radius: 10px;
-    }
+        .lista-ingredientes li {
+            margin: 4px 0;
+            text-align: center;
+        }
+        .servicio{
+            width: 800px;
+            height: 500px;
+            border-radius: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        @media (max-width: 800px) {
+            .contenedor {
+                width: 95%;
+                flex-direction: column; /* Apila verticalmente */
+                padding: 10px;
+            }
+
+            .contenedor-servicios {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            .contenedor-servicios h2 {
+                font-size: 22px;
+            }
+
+            .contenedor-servicios p,
+            .contenedor-servicios ul,
+            .contenedor-servicios ul li {
+                font-size: 16px;
+                text-align: left;
+            }
+
+            .lista-ingredientes {
+                grid-template-columns: 1fr; /* Una columna para lista */
+                gap: 10px;
+                padding-left: 0;
+            }
+
+            .servicio {
+                width: 100%;  /* Imagen se adapta al contenedor */
+                height: auto;
+                margin: 15px 0;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .contenedor-servicios h2 {
+                font-size: 18px;
+            }
+
+            .contenedor-servicios p,
+            .contenedor-servicios ul,
+            .contenedor-servicios ul li {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -94,7 +148,9 @@
             <a href="Menu.html">Menú</a>
             <a href="Servicios.html">Servicios</a>
             <a href="laborsocial.html">Labor social</a>
-            <span class="fab fa-facebook"></span>
+            <a href="https://www.facebook.com/tradicionalsabordondimas" target="_blank">
+                <span class="fab fa-facebook"></span>
+            </a>
         </nav>
     </header>
 
@@ -126,7 +182,7 @@
                 <hr>
                 <li style="margin-top: 15px;"><span class="fas fa-user"></span> <strong>Servicio con preparacion:</strong> Además de los ingredientes, llevamos a alguien que estara preparando las botanas en el transcurso de tu evento.</li>
                 <hr>
-                <img src="Imagenes/S1.jpg" alt="S1" class="servicio">
+                <img src="Imagenes/S3.jpg" alt="S3" class="servicio">
             </ul>
             <p style="margin-top: 20px;">
                 ¡Contáctanos para cotizar tu evento y llevar el auténtico sabor a tu celebración!
